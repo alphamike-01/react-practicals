@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+body { margin: 0; min-width: 320px; }
+button, input, select { font: inherit; }
+button, a { cursor: pointer; }
+a { text-decoration: none; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 15px max(20px, calc((100% - 1180px) / 2));
+  background: #fff; border-bottom: 1px solid #e4e8ef;
+}
+.brand { font-size: 21px; font-weight: 900; }
+.brand span { font-weight: 500; }
+.topbar nav { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+.nav-link { color: #657085; padding: 8px 11px; border-radius: 8px; font-weight: 700; font-size: 14px; }
+.nav-link:hover, .nav-link.active { background: #edf2ff; color: #315fc8; }
+
+.app-shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 50px 0 70px; }
+.hero { padding: 25px 0 35px; }
+.badge { display: inline-block; padding: 7px 12px; border-radius: 999px; background: #e8efff; color: #315fc8; font-size: 13px; font-weight: 800; }
+h1 { margin: 12px 0 8px; font-size: clamp(32px, 5vw, 50px); line-height: 1.05; }
+.hero p, .page-heading p { color: #687386; font-size: 17px; margin: 0; }
+.hero-actions { display: flex; gap: 10px; margin-top: 24px; }
+.button-link { display: inline-block; }
+
+.primary, .secondary, .edit, .delete {
+  border: 0; border-radius: 9px; padding: 10px 14px; font-weight: 800;
+}
+.primary { background: #315fc8; color: white; }
+.secondary { background: #edf0f5; color: #344054; }
+.edit { background: #eaf1ff; color: #315fc8; display: inline-block; }
+.delete { background: #fff0f0; color: #c43838; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.stat-card, .card {
+  background: #fff; border: 1px solid #e1e6ef; border-radius: 17px;
+  box-shadow: 0 12px 35px rgba(27,45,77,.06);
+}
+.stat-card { padding: 20px; display: grid; gap: 4px; }
+.stat-card strong { font-size: 26px; }
+.stat-card span { font-weight: 800; }
+.stat-card small { color: #7a8494; }
+
+.page-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.page-heading h1 { margin-bottom: 7px; }
+.eyebrow { margin: 0; color: #657085; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.count { min-width: 36px; padding: 7px 11px; border-radius: 10px; background: #eef1f6; text-align: center; font-weight: 800; }
+
+.search-card { padding: 15px; margin-bottom: 15px; }
+.search { width: 100%; border: 1px solid #d5dce7; border-radius: 10px; padding: 12px; outline: none; }
+.search:focus, input:focus, select:focus { border-color: #547de5; box-shadow: 0 0 0 3px rgba(84,125,229,.12); }
+
+.table-wrap { overflow-x: auto; padding: 15px; }
+table { width: 100%; border-collapse: collapse; min-width: 690px; }
+th, td { padding: 13px 10px; border-bottom: 1px solid #edf0f4; text-align: left; font-size: 14px; }
+th { color: #667085; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+.actions { display: flex; gap: 7px; }
+.empty { padding: 45px; text-align: center; color: #737e90; }
+.alert { padding: 12px 15px; border-radius: 10px; margin-bottom: 18px; font-weight: 700; }
+.error { background: #fff0f0; color: #a72e2e; }
+
+.student-form { width: min(600px, 100%); padding: 25px; display: grid; gap: 16px; }
+.student-form label { display: grid; gap: 7px; font-size: 13px; font-weight: 800; }
+.student-form input, .student-form select { width: 100%; border: 1px solid #d6dce6; border-radius: 10px; padding: 11px 12px; outline: none; background: #fff; }
+.form-actions { display: flex; gap: 8px; margin-top: 4px; }
+.form-actions .primary { flex: 1; }
+.back-link { display: inline-block; margin-top: 18px; color: #315fc8; font-weight: 800; }
+
+.concept-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; overflow: hidden; }
+.concept-grid div { background: #fff; padding: 22px; display: grid; gap: 6px; }
+.concept-grid span { color: #687386; line-height: 1.5; }
+
+@media (max-width: 800px) {
+  .topbar { align-items: flex-start; flex-direction: column; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .concept-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .app-shell { width: calc(100% - 20px); padding-top: 28px; }
+  .stats { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions a { text-align: center; }
+}

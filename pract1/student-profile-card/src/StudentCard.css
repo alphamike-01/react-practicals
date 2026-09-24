@@ -1,0 +1,31 @@
+body{
+    background:#f2f2f2;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.card{
+    width:350px;
+    margin:50px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.profile-image{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid #0d6efd;
+}
+
+h2{
+    color:#0d6efd;
+}
+
+p{
+    text-align:left;
+    margin-left:20px;
+    font-size:16px;
+}
