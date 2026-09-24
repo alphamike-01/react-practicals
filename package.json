@@ -1,0 +1,12 @@
+{
+  "name": "react-practicals-unified",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node scripts/build-all.mjs",
+    "dev": "node scripts/build-all.mjs"
+  },
+  "dependencies": {
+    "mongoose": "^8.10.0"
+  }
+}

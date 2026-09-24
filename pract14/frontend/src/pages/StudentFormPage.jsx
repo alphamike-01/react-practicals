@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import StudentForm from "../components/StudentForm";
 import { addStudent, updateStudent } from "../store/studentsSlice";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 const blank = { name: "", email: "", course: "", semester: 1 };
 
 function StudentFormPage() {
